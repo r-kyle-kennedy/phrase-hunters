@@ -1,7 +1,5 @@
-from phrasehunter.game import Game
-from phrasehunter.phrase import Phrase
-import phrasehunter.phrases
+import phrasehunter.game
 
 if __name__ == '__main__':
-    game = Game()
+    game = phrasehunter.game.Game()
     game.start()

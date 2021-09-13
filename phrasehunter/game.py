@@ -1,7 +1,7 @@
 import random
 
-from phrase import Phrase
-import phrases
+from phrasehunter.phrase import Phrase
+from phrasehunter import phrases
 
 
 class Game():
@@ -46,7 +46,7 @@ class Game():
             print('GAME OVER!!!')
             print(f'{self.player_name}, you didn\'t guess the phrase in less than 5 guesses...')
             print(f'The phrase was \'{self.active_phrase.phrase}\'.')
-            self.continue_game = input('Would you like to play again?(Y/N)  ').lower()
+            self.continue_game = input('\nWould you like to play again?(Y/N)  ').lower()
         else:
             print(f'Congratulations {self.player_name}!!!')
             if self.missed != 1:
@@ -54,7 +54,7 @@ class Game():
             else:
                 print(f'You guessed the phrase with {self.missed} missed try!')
             print(f'The phrase was \'{self.active_phrase.phrase}\'.')
-            self.continue_game = input('Would you like to play again?(Y/N)  ').lower()
+            self.continue_game = input('\nWould you like to play again?(Y/N)  ').lower()
 
     def start(self):
         while self.continue_game == 'y':
@@ -79,7 +79,7 @@ class Game():
                     elif self.missed < 5:
                         print(f'You have {5-self.missed} guess left! Don\'t mess up...\n')
             self.game_over()
-        print('Thanks for playing!!!')
+        print('\nThanks for playing!!!\n')
 
 if __name__ == '__main__':
     game = Game()
