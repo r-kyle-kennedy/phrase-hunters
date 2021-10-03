@@ -19,7 +19,6 @@ class Phrase():
 
     def check_letter(self, guess):
         if guess in self.phrase_set:
-            print(guess)
             self.correct_guesses.append(guess)
             return True
         else:

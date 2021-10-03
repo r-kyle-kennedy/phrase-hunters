@@ -32,13 +32,13 @@ class Game():
         if len(guess) == 1 and guess.isalpha():
             if guess in self.guesses:
                 print(f'Woops looks like \'{guess}\' has already been guessed...')
-                self.get_guess()
+                return self.get_guess()
             else:
                 self.guesses.append(guess)
                 return guess
         else:
             print(f'Looks like \'{guess}\' is not a letter between a-z')
-            self.get_guess()
+            return self.get_guess()
 
     def game_over(self):
         print()
